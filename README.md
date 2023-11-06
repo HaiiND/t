@@ -62,6 +62,8 @@ Dưới đây, chúng ta sẽ tìm hiểu cách thực hiện các nhiệm vụ 
 
 Tiến trình là các chương trình hoặc nhiệm vụ đang chạy trên hệ thống. Dưới đây là một số tập lệnh quản lý tiến trình quan trọng:
 
+  ![image](https://github.com/HaiiND/t/assets/120678965/fa6c8711-dd42-4d36-b459-86a097047c1e)
+
 - ps: Sử dụng để liệt kê tất cả các tiến trình đang chạy trên hệ thống.
 
 - top hoặc htop: Hiển thị danh sách tiến trình đang chạy theo thời gian thực, bao gồm thông tin về sử dụng CPU và bộ nhớ.
