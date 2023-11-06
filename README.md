@@ -12,24 +12,20 @@ Trong Ubuntu, tài khoản người dùng là các thực thể được tạo r
 Thay đổi mật khẩu người dùng: Sử dụng lệnh sudo passwd <username> để đặt lại mật khẩu cho một người dùng cụ thể.
 Xem các user trên hệ thống sử dụng lệnh getent passwd
 
-![image](https://github.com/HaiiND/t/assets/120678965/c3964ecb-bf09-48b5-a783-ae82ad2fc2dc)
+  ![image](https://github.com/HaiiND/t/assets/120678965/c3964ecb-bf09-48b5-a783-ae82ad2fc2dc)
 
 Khóa và mở khóa tài khoản: Dùng lệnh sudo passwd -l <username> để khóa một tài khoản người dùng. Để mở khóa, bạn sử dụng lệnh sudo passwd -u <username>.
 
-![image](https://github.com/HaiiND/t/assets/120678965/29b41c33-fe9a-428d-bbbe-c2ba002a58da)
-hdh1: Đây là tên người dùng (username) của tài khoản người dùng. Khi người dùng đăng nhập vào hệ thống, họ sẽ sử dụng tên người dùng này.
+  ![image](https://github.com/HaiiND/t/assets/120678965/29b41c33-fe9a-428d-bbbe-c2ba002a58da)
 
-x: Phần này thường được sử dụng để lưu trữ mật khẩu được băm (hashed password). Trong trường hợp này, "x" chỉ ra rằng mật khẩu đã được lưu trữ trong tệp /etc/shadow và không thể đọc trực tiếp từ tệp /etc/passwd. Thông tin mật khẩu được lưu trữ an toàn hơn trong /etc/shadow.
-
-1001: Đây là User ID (UID) của tài khoản người dùng. UID là một số duy nhất dùng để xác định tài khoản người dùng trong hệ thống. Mỗi tài khoản người dùng có một UID riêng. Trong trường hợp này, UID là 1001.
-
-1001: Đây là Group ID (GID) của tài khoản người dùng. GID xác định tài khoản thuộc về nhóm nào. Trong trường hợp này, GID cũng là 1001, có thể người dùng này thuộc vào một nhóm có cùng GID.
-
-,,,: Những phần này thường liên quan đến thông tin về người dùng như tên đầy đủ, số điện thoại, địa chỉ, v.v. Trong trường hợp này, thông tin này đã được bỏ trống, vì vậy bạn thấy dấu phẩy liền kề.
-
-/home/hdh1: Đây là đường dẫn đến thư mục chủ (home directory) của tài khoản người dùng. Đây là nơi người dùng lưu trữ các tệp và thư mục cá nhân của họ.
-
-/bin/bash: Đây là đường dẫn đến shell mặc định mà tài khoản người dùng sẽ sử dụng khi đăng nhập vào hệ thống. Trong trường hợp này, tài khoản người dùng sẽ sử dụng shell Bash (/bin/bash) khi đăng nhập.
+- hdh1: Đây là tên người dùng (username) của tài khoản người dùng. Khi người dùng đăng nhập vào hệ thống, họ sẽ sử dụng tên người dùng này.
+- x: Phần này thường được sử dụng để lưu trữ mật khẩu được băm (hashed password). Trong trường hợp này, "x" chỉ ra rằng mật khẩu đã được lưu trữ trong tệp /etc/shadow và không thể đọc trực tiếp từ tệp /etc/passwd. Thông tin mật khẩu được lưu trữ an toàn hơn trong /etc/shadow.
+- 1001: Đây là User ID (UID) của tài khoản người dùng. UID là một số duy nhất dùng để xác định tài khoản người dùng trong hệ thống. Mỗi tài khoản người dùng có một UID riêng. Trong trường hợp này, UID là 1001.
+- 1001: Đây là Group ID (GID) của tài khoản người dùng. GID xác định tài khoản thuộc về nhóm nào. Trong trường hợp này, GID cũng là 1001, có thể người dùng này thuộc vào một nhóm có cùng GID.
+- ,,,: Những phần này thường liên quan đến thông tin về người dùng như tên đầy đủ, số điện thoại, địa chỉ, v.v. Trong trường hợp này, thông tin này đã được bỏ trống, vì vậy bạn thấy dấu phẩy liền kề.
+- /home/hdh1: Đây là đường dẫn đến thư mục chủ (home directory) của tài khoản người dùng. Đây là nơi người dùng lưu trữ các tệp và thư mục cá nhân của họ.
+- /bin/bash: Đây là đường dẫn đến shell mặc định mà tài khoản người dùng sẽ sử dụng khi đăng nhập vào hệ thống. Trong trường hợp này, tài khoản người dùng sẽ sử dụng shell Bash (/bin/bash) khi đăng nhập.
+- 
 ## 2. Tạo nhóm:
 
 Trong Ubuntu, bạn có thể tạo các nhóm để quản lý quyền truy cập và chia sẻ tài nguyên giữa các người dùng. Dưới đây là các bước để tạo một nhóm:
