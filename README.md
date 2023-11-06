@@ -25,13 +25,14 @@ Khóa và mở khóa tài khoản: Dùng lệnh sudo passwd -l <username> để 
 - ,,,: Những phần này thường liên quan đến thông tin về người dùng như tên đầy đủ, số điện thoại, địa chỉ, v.v. Trong trường hợp này, thông tin này đã được bỏ trống, vì vậy bạn thấy dấu phẩy liền kề.
 - /home/hdh1: Đây là đường dẫn đến thư mục chủ (home directory) của tài khoản người dùng. Đây là nơi người dùng lưu trữ các tệp và thư mục cá nhân của họ.
 - /bin/bash: Đây là đường dẫn đến shell mặc định mà tài khoản người dùng sẽ sử dụng khi đăng nhập vào hệ thống. Trong trường hợp này, tài khoản người dùng sẽ sử dụng shell Bash (/bin/bash) khi đăng nhập.
-- 
+  
 ## 2. Tạo nhóm:
 
 Trong Ubuntu, bạn có thể tạo các nhóm để quản lý quyền truy cập và chia sẻ tài nguyên giữa các người dùng. Dưới đây là các bước để tạo một nhóm:
 
-sudo groupadd <groupname>: Lệnh này tạo một nhóm mới với tên <groupname>.
-sudo usermod -aG <groupname> <username>: Sử dụng để thêm một tài khoản người dùng vào một nhóm cụ thể.
+- sudo groupadd <groupname>: Lệnh này tạo một nhóm mới với tên <groupname>.
+- sudo usermod -aG <groupname> <username>: Sử dụng để thêm một tài khoản người dùng vào một nhóm cụ thể.
+
 Quyền sudo: Một phần quan trọng trong việc quản lý tài khoản người dùng là xác định ai có quyền thực hiện các tác vụ cấp cao như cài đặt phần mềm hay quản lý hệ thống. Người dùng được thêm vào nhóm sudoers có thể sử dụng lệnh sudo để thực hiện các tác vụ có quyền.
 
 Quyền truy cập vào tệp và thư mục: Sử dụng lệnh chmod để thay đổi quyền truy cập của tệp và thư mục. Bạn có thể sử dụng lệnh chown để thay đổi chủ sở hữu của tệp và thư mục.
@@ -40,14 +41,12 @@ Quyền truy cập vào tệp và thư mục: Sử dụng lệnh chmod để tha
 
 Khi bạn đã tạo các nhóm, có một số tập lệnh quản trị nhóm quan trọng:
 
-groups <username>: Hiển thị danh sách các nhóm mà một tài khoản người dùng cụ thể thuộc vào.
-sudo deluser <username> <groupname>: Sử dụng để loại bỏ một tài khoản người dùng khỏi một nhóm.
-sudo gpasswd -a <username> <groupname>: Để thêm một tài khoản người dùng vào một nhóm.
-Phân quyền dựa trên nhóm: Bạn có thể cấp quyền truy cập cho một tệp hoặc thư mục dựa trên các nhóm sử dụng chown và chmod.
-
-Xem danh sách nhóm: Sử dụng lệnh cat /etc/group để xem danh sách tất cả các nhóm trên hệ thống.
-
-Xóa nhóm: Để xóa một nhóm, bạn có thể sử dụng lệnh sudo groupdel <groupname>.
+- groups <username>: Hiển thị danh sách các nhóm mà một tài khoản người dùng cụ thể thuộc vào.
+- sudo deluser <username> <groupname>: Sử dụng để loại bỏ một tài khoản người dùng khỏi một nhóm.
+- sudo gpasswd -a <username> <groupname>: Để thêm một tài khoản người dùng vào một nhóm.
+- Phân quyền dựa trên nhóm: Bạn có thể cấp quyền truy cập cho một tệp hoặc thư mục dựa trên các nhóm sử dụng chown và chmod.
+- Xem danh sách nhóm: Sử dụng lệnh cat /etc/group để xem danh sách tất cả các nhóm trên hệ thống.
+- Xóa nhóm: Để xóa một nhóm, bạn có thể sử dụng lệnh sudo groupdel <groupname>.
 
 Quản lý tài khoản người dùng và nhóm là một phần quan trọng của việc bảo mật và quản lý hệ thống Ubuntu. Nó cho phép bạn kiểm soát quyền truy cập vào tài nguyên và dữ liệu, đồng thời cũng giúp bạn tổ chức và quản lý người dùng dễ dàng hơn. Hãy luôn thực hiện các thao tác quản lý này cẩn thận và có lập kế hoạch trước để đảm bảo tính an toàn và hiệu quả của hệ thống.
 
