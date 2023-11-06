@@ -60,6 +60,12 @@ Có 1 chú ý nhỏ về sự khác nhau giữa sudo và gksudo: Khi sử dụng
 
 Tài khoản người dùng nobody được sử dụng để chạy các dịch vụ trên hệ thống. Tài khoản này không có thư mục home hoặc môi trường làm việc shell. Nếu tài khoản này bị lỗi, các dịch vụ đang chạy sử dụng tài khoản này sẽ bị ảnh hưởng nhưng hệ thống vẫn được bảo mật. 
 
+#### 1.3 Tài khoản bin 
+
+Tài khoản bin được sử dụng trên hệ thống với thư mục home là /bin. Tài khoản này được sử dụng để bảo mật các file nhị phân cơ bản trên hệ thống. Tài khoản bin không có môi trường làm việc shell. Tài khoản này được tạo mặc định trong quá trình cài đặt hệ thống.
+
+#### 1.4 Quản lý tài khoản người dùng
+
 Trong Ubuntu, tài khoản người dùng là các thực thể được tạo ra để cho phép người dùng truy cập và sử dụng hệ thống. Dưới đây là một số tập lệnh quan trọng để quản lý tài khoản người dùng:
 
 - sudo adduser <username>: Sử dụng lệnh này để tạo một tài khoản người dùng mới với tên người dùng <username>.
@@ -88,7 +94,7 @@ Một số UID đặc biệt:
 - UID = 65534: được gán cho tài khoản Nobody. 
 - UID = 1 – 99: được gán riêng cho các tài khoản dịch vụ. 
 
-## 2. Tạo nhóm:
+#### 1.5 Tạo nhóm:
 
 Trong Ubuntu, bạn có thể tạo các nhóm để quản lý quyền truy cập và chia sẻ tài nguyên giữa các người dùng. Dưới đây là các bước để tạo một nhóm:
 
@@ -102,7 +108,7 @@ Quyền sudo: Một phần quan trọng trong việc quản lý tài khoản ng�
 
 Quyền truy cập vào tệp và thư mục: Sử dụng lệnh chmod để thay đổi quyền truy cập của tệp và thư mục. Bạn có thể sử dụng lệnh chown để thay đổi chủ sở hữu của tệp và thư mục.
 
-## 3. Tập lệnh quản trị nhóm:
+#### 1.6 Tập lệnh quản trị nhóm:
 
 Khi bạn đã tạo các nhóm, có một số tập lệnh quản trị nhóm quan trọng:
 
