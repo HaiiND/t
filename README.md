@@ -27,6 +27,39 @@ Sau bước này bạn nhập password của bạn vào và sẽ được hỏi 
 
 Thông báo sau cùng : passwd: password updated successfully là thành công
 
+Để chuyển sang tài khoản của root, dùng lệnh: `su`
+
+Sau đó nhập password vừa tạo cho Root, và sẽ thành thế này:
+root@xxx:/home/username#
+
+Mặc định, mật khẩu của tài khoản root bị khóa trong Ubuntu. Điều này có nghĩa là bạn không thể đăng nhập trực tiếp với tài khoản root hoặc sử dụng lệnh `su` để trở thành người dùng root. Nhưng bạn vẫn có thể chạy các chương trình với đặc quyền của root với sudo, nó cho phép người dùng chạy chương trình nào đó với quyền root mà không phải biết mật khẩu của root.
+
+
+Điều này có nghĩa là trong thiết bị cuối (terminal) bạn nên sử dụng sudo cho những lệnh cần đặc quyền của root; đơn giản chỉ việc thêm “sudo” vào đầu tất cả các lệnh bạn sẽ chạy với quyền root. Nên nhớ rằng, khi ” sudo” yêu cầu nhập mật khẩu, nó cần mật khẩu người dùng chứ không phải mật khẩu của tài khoản root.
+
+Mặc định không cho đăng nhập trực tiếp với tài khoản root có những lợi ích sau:
+- Trình cài đặt sẽ phải hỏi một vài câu hỏi.
+- Người dùng không cần phải nhớ mật khẩu root, cái mà họ rất hay quên.
+- Tránh xa quyền “Tôi có thể làm mọi thứ” khi đăng nhập, bạn sẽ được nhắc khi làm bất kỳ điều gì thay đổi đến hệ thống.
+- Sudo thêm một lịch sử các lệnh đã chạy trong /var/log/auth.log. Nếu bạn gặp vấn để, bạn luôn luôn có thể quay lại và xem những lệnh nào đã được thực hiện. Nó cũng tốt để quản lý, kiểm tra.
+- Mật khẩu tài khoản root bị khóa làm máy tính bạn an toàn hơn rất nhiều. Mọi cracker sẽ thử tấn công vào tài khoản root trước tiên, mật khẩu root bị khóa đồng nghĩa với việc loại bỏ được 1 lần nguy hiểm.
+
+Chú ý:
+- Để sử dụng lệnh với quyền root, thêm sudo vào đầu mỗi lệnh.
+- Mật khẩu sẽ được lưu lại mặc định là 15 phút. Sau khoảng thời gian này, bạn cần nhập lại mật khẩu khi sử dụng sudo
+- Mật khẩu sẽ không hiện lên màn hình khi bạn đánh, không hiện một hàng dấu '*'. Nó bắt đầu được nhập vào với mỗi lần gõ phím.
+- sudo !! sẽ lặp lại lệnh cuối cùng nhưng với quyền root, nghĩa là thêm vào sudo ở đầu lệnh đó.
+- Bạn không nên sử dụng sudo cho những chương trình có giao diện đồ họa, bạn nên sử dụng gksudo, ví dụ: ALT + F2 gksudo gedit
+
+Đăng nhập với quyền root:
+- Bạn có thể sử dụng sudo hoặc gksudo để thực thi với đặc quyền của root, nhưng nếu bạn vẫn muốn đăng nhập với người dùng root thì có thể dùng lệnh:
+ Mã: sudo –i 
+Có 1 chú ý nhỏ về sự khác nhau giữa sudo và gksudo: Khi sử dụng câu lệnh sudo, thì chúng ta sẽ thực thi một câu lệnh với quyền root nhưng với các thiết đặt (configuration) là của user đang sử dụng. Trong khi đó gksudo thì ngược lại. gksudo sẽ thực thi một câu lệnh với quyền root và với các thiết đặt cũng của root luôn. Chính vì thế, khi dùng sudo cho các chương trình có giao diện đồ họa nhiều lúc có thể dẫn tới lỗi.
+
+#### 1.2 Tài khoản nobody 
+
+Tài khoản người dùng nobody được sử dụng để chạy các dịch vụ trên hệ thống. Tài khoản này không có thư mục home hoặc môi trường làm việc shell. Nếu tài khoản này bị lỗi, các dịch vụ đang chạy sử dụng tài khoản này sẽ bị ảnh hưởng nhưng hệ thống vẫn được bảo mật. 
+
 Trong Ubuntu, tài khoản người dùng là các thực thể được tạo ra để cho phép người dùng truy cập và sử dụng hệ thống. Dưới đây là một số tập lệnh quan trọng để quản lý tài khoản người dùng:
 
 - sudo adduser <username>: Sử dụng lệnh này để tạo một tài khoản người dùng mới với tên người dùng <username>.
