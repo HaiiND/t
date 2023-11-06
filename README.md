@@ -31,7 +31,9 @@ Khóa và mở khóa tài khoản: Dùng lệnh sudo passwd -l <username> để 
 Trong Ubuntu, bạn có thể tạo các nhóm để quản lý quyền truy cập và chia sẻ tài nguyên giữa các người dùng. Dưới đây là các bước để tạo một nhóm:
 
 - sudo groupadd <groupname>: Lệnh này tạo một nhóm mới với tên <groupname>.
-  
+
+  ![image](https://github.com/HaiiND/t/assets/120678965/cf89fec5-cc3c-46dd-a40c-3a2be40fb5df)
+
 - sudo usermod -aG <groupname> <username>: Sử dụng để thêm một tài khoản người dùng vào một nhóm cụ thể.
 
 Quyền sudo: Một phần quan trọng trong việc quản lý tài khoản người dùng là xác định ai có quyền thực hiện các tác vụ cấp cao như cài đặt phần mềm hay quản lý hệ thống. Người dùng được thêm vào nhóm sudoers có thể sử dụng lệnh sudo để thực hiện các tác vụ có quyền.
