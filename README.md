@@ -35,7 +35,8 @@ sudo usermod -aG <groupname> <username>: Sử dụng để thêm một tài kho�
 Quyền sudo: Một phần quan trọng trong việc quản lý tài khoản người dùng là xác định ai có quyền thực hiện các tác vụ cấp cao như cài đặt phần mềm hay quản lý hệ thống. Người dùng được thêm vào nhóm sudoers có thể sử dụng lệnh sudo để thực hiện các tác vụ có quyền.
 
 Quyền truy cập vào tệp và thư mục: Sử dụng lệnh chmod để thay đổi quyền truy cập của tệp và thư mục. Bạn có thể sử dụng lệnh chown để thay đổi chủ sở hữu của tệp và thư mục.
-3. Tập lệnh quản trị nhóm:
+
+## 3. Tập lệnh quản trị nhóm:
 
 Khi bạn đã tạo các nhóm, có một số tập lệnh quản trị nhóm quan trọng:
 
@@ -52,9 +53,9 @@ Quản lý tài khoản người dùng và nhóm là một phần quan trọng c
 
 
 
-Quản lý tiến trình, bộ nhớ, thư mục, và vào/ra là một phần quan trọng của việc quản lý hệ thống Ubuntu và các hệ thống Linux khác. Dưới đây, chúng ta sẽ tìm hiểu cách thực hiện các nhiệm vụ quản lý này và sử dụng một số tập lệnh quan trọng trong Ubuntu.
+# Quản lý tiến trình, bộ nhớ, thư mục, và vào/ra là một phần quan trọng của việc quản lý hệ thống Ubuntu và các hệ thống Linux khác. Dưới đây, chúng ta sẽ tìm hiểu cách thực hiện các nhiệm vụ quản lý này và sử dụng một số tập lệnh quan trọng trong Ubuntu.
 
-1. Quản lý tiến trình:
+## 1. Quản lý tiến trình:
 
 Tiến trình là các chương trình hoặc nhiệm vụ đang chạy trên hệ thống. Dưới đây là một số tập lệnh quản lý tiến trình quan trọng:
 
@@ -64,7 +65,7 @@ top hoặc htop: Hiển thị danh sách tiến trình đang chạy theo thời 
 
 kill: Sử dụng để dừng tiến trình. Cú pháp cơ bản là kill <PID>, trong đó <PID> là số xác định tiến trình.
 
-2. Quản lý bộ nhớ:
+## 2. Quản lý bộ nhớ:
 
 Bộ nhớ là một phần quan trọng của hệ thống và việc quản lý nó đảm bảo rằng hệ thống hoạt động một cách hiệu quả. Dưới đây là một số tập lệnh liên quan đến quản lý bộ nhớ:
 
@@ -74,7 +75,7 @@ top hoặc htop: Bên cạnh việc quản lý tiến trình, chúng cũng hiể
 
 vmstat: Hiển thị thông tin về việc sử dụng bộ nhớ ở cấp hệ thống.
 
-3. Quản lý thư mục:
+## 3. Quản lý thư mục:
 
 Quản lý thư mục là việc sắp xếp, tạo ra, di chuyển và xóa thư mục và tệp trong hệ thống tệp của bạn. Dưới đây là một số tập lệnh quản lý thư mục quan trọng:
 
@@ -86,7 +87,7 @@ cd: Sử dụng để di chuyển giữa các thư mục. Cú pháp là cd <đư
 
 rm: Dùng để xóa tệp hoặc thư mục. Cú pháp là rm <tên_tệp_đã_xóa> hoặc rm -r <tên_thư_mục_đã_xóa> để xóa thư mục và nội dung bên trong.
 
-4. Quản lý vào/ra:
+## 4. Quản lý vào/ra:
 
 Trong Linux, mọi thứ được xem là một tệp, bao gồm cả các thiết bị và cổng giao tiếp. Dưới đây là một số tập lệnh liên quan đến quản lý vào/ra:
 
@@ -105,35 +106,29 @@ Quản lý tiến trình, bộ nhớ, thư mục, và vào/ra là một phần q
 
 
 
-Gói cài đặt (package management) là một khía cạnh quan trọng trong việc quản lý hệ thống Ubuntu và các hệ điều hành dựa trên Linux khác. Gói cài đặt là cách tiện lợi để cài đặt, cập nhật và quản lý phần mềm trên hệ thống. Ubuntu sử dụng hệ thống quản lý gói cài đặt dpkg cùng với apt hoặc apt-get để tạo một môi trường quản lý gói mạnh mẽ và dễ sử dụng. Trong bài viết này, chúng ta sẽ tìm hiểu về gói cài đặt dpkg và cách sử dụng nó trong Ubuntu.
+# Gói cài đặt (package management) là một khía cạnh quan trọng trong việc quản lý hệ thống Ubuntu và các hệ điều hành dựa trên Linux khác. Gói cài đặt là cách tiện lợi để cài đặt, cập nhật và quản lý phần mềm trên hệ thống. Ubuntu sử dụng hệ thống quản lý gói cài đặt dpkg cùng với apt hoặc apt-get để tạo một môi trường quản lý gói mạnh mẽ và dễ sử dụng. Trong bài viết này, chúng ta sẽ tìm hiểu về gói cài đặt dpkg và cách sử dụng nó trong Ubuntu.
 
 Gói cài đặt dpkg:
 
-dpkg là hệ thống quản lý gói cơ bản trong Ubuntu. Nó cho phép bạn cài đặt, cập nhật, xóa và quản lý các gói phần mềm.
+- dpkg là hệ thống quản lý gói cơ bản trong Ubuntu. Nó cho phép bạn cài đặt, cập nhật, xóa và quản lý các gói phần mềm.
+
 Các tập lệnh quản lý gói cài đặt dpkg quan trọng:
 
-Cài đặt gói từ tệp .deb:
-
-Sử dụng lệnh dpkg -i <tên_gói.deb> để cài đặt một gói từ một tệp .deb. Ví dụ: dpkg -i package.deb.
-Cập nhật gói cài đặt:
-
-Để cập nhật một gói đã được cài đặt, sử dụng lệnh dpkg -i --force-confnew <tên_gói.deb>. Điều này đảm bảo rằng các tệp cấu hình sẽ được cập nhật mà không ghi đè lên các tùy chọn cấu hình hiện có.
+- Cài đặt gói từ tệp .deb:
+  - Sử dụng lệnh dpkg -i <tên_gói.deb> để cài đặt một gói từ một tệp .deb. Ví dụ: dpkg -i package.deb.
+- Cập nhật gói cài đặt:
+  - Để cập nhật một gói đã được cài đặt, sử dụng lệnh dpkg -i --force-confnew <tên_gói.deb>. Điều này đảm bảo rằng các tệp cấu hình sẽ được cập nhật mà không ghi đè lên các tùy chọn cấu hình hiện có.
 Xem trạng thái gói cài đặt:
+  - Sử dụng lệnh dpkg -l để liệt kê tất cả các gói đã cài đặt và trạng thái của chúng.
+- Xóa gói cài đặt:
+  - Sử dụng lệnh dpkg -r <tên_gói> để xóa một gói đã cài đặt nhưng giữ lại các tệp cấu hình. Để xóa một gói cùng với tệp cấu hình, sử dụng lệnh dpkg -P <tên_gói>.
+- Kiểm tra phụ thuộc gói:
+  - Để kiểm tra phụ thuộc của một gói, sử dụng lệnh dpkg -I <tên_gói.deb>. Nó sẽ hiển thị thông tin chi tiết về gói và các phụ thuộc của nó.
 
-Sử dụng lệnh dpkg -l để liệt kê tất cả các gói đã cài đặt và trạng thái của chúng.
-Xóa gói cài đặt:
-
-Sử dụng lệnh dpkg -r <tên_gói> để xóa một gói đã cài đặt nhưng giữ lại các tệp cấu hình. Để xóa một gói cùng với tệp cấu hình, sử dụng lệnh dpkg -P <tên_gói>.
-Kiểm tra phụ thuộc gói:
-
-Để kiểm tra phụ thuộc của một gói, sử dụng lệnh dpkg -I <tên_gói.deb>. Nó sẽ hiển thị thông tin chi tiết về gói và các phụ thuộc của nó.
 Lợi ích của dpkg trong Ubuntu:
+- dpkg là một công cụ quản lý gói mạnh mẽ và linh hoạt, cho phép bạn thực hiện nhiều tác vụ quản lý gói cài đặt mà không cần kết nối internet.
+- dpkg là một phần của cơ sở hệ thống quản lý gói Debian, điều này có nghĩa là các gói cài đặt .deb có thể được sử dụng trên nhiều hệ thống dựa trên Debian như Ubuntu và Debian chính thống.
+- Dựa vào dpkg, Ubuntu sử dụng các công cụ quản lý gói mở rộng như apt và apt-get, giúp quản lý gói cài đặt và giải quyết các phụ thuộc một cách dễ dàng hơn.
 
-dpkg là một công cụ quản lý gói mạnh mẽ và linh hoạt, cho phép bạn thực hiện nhiều tác vụ quản lý gói cài đặt mà không cần kết nối internet.
-
-dpkg là một phần của cơ sở hệ thống quản lý gói Debian, điều này có nghĩa là các gói cài đặt .deb có thể được sử dụng trên nhiều hệ thống dựa trên Debian như Ubuntu và Debian chính thống.
-
-Dựa vào dpkg, Ubuntu sử dụng các công cụ quản lý gói mở rộng như apt và apt-get, giúp quản lý gói cài đặt và giải quyết các phụ thuộc một cách dễ dàng hơn.
-
-Trong kết luận, dpkg là một công cụ quản lý gói cài đặt quan trọng trong Ubuntu, cho phép bạn cài đặt, cập nhật và quản lý phần mềm trên hệ thống một cách hiệu quả. Sử dụng dpkg cùng với các công cụ quản lý gói mở rộng giúp tạo ra một môi trường quản lý gói đáng tin cậy trên hệ thống của bạn.
+Kết luận, dpkg là một công cụ quản lý gói cài đặt quan trọng trong Ubuntu, cho phép bạn cài đặt, cập nhật và quản lý phần mềm trên hệ thống một cách hiệu quả. Sử dụng dpkg cùng với các công cụ quản lý gói mở rộng giúp tạo ra một môi trường quản lý gói đáng tin cậy trên hệ thống của bạn.
 
