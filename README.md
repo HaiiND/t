@@ -74,6 +74,8 @@ Tiến trình là các chương trình hoặc nhiệm vụ đang chạy trên h�
 
 Bộ nhớ là một phần quan trọng của hệ thống và việc quản lý nó đảm bảo rằng hệ thống hoạt động một cách hiệu quả. Dưới đây là một số tập lệnh liên quan đến quản lý bộ nhớ:
 
+  ![image](https://github.com/HaiiND/t/assets/120678965/7a4218bb-94bf-4460-b1d4-022c6467b066)
+
 - free: Hiển thị thông tin về bộ nhớ hệ thống, bao gồm bộ nhớ đã sử dụng và còn trống.
 
 - top hoặc htop: Bên cạnh việc quản lý tiến trình, chúng cũng hiển thị thông tin về việc sử dụng bộ nhớ, giúp bạn xác định các tiến trình tiêu tốn nhiều bộ nhớ.
@@ -83,6 +85,8 @@ Bộ nhớ là một phần quan trọng của hệ thống và việc quản l�
 ## 3. Quản lý thư mục:
 
 Quản lý thư mục là việc sắp xếp, tạo ra, di chuyển và xóa thư mục và tệp trong hệ thống tệp của bạn. Dưới đây là một số tập lệnh quản lý thư mục quan trọng:
+
+  ![image](https://github.com/HaiiND/t/assets/120678965/46f3cc24-63fc-4d20-992a-b40e5c000a8f)
 
 - ls: Dùng để liệt kê các tệp và thư mục trong thư mục hiện tại.
 
@@ -95,7 +99,7 @@ Quản lý thư mục là việc sắp xếp, tạo ra, di chuyển và xóa th�
 ## 4. Quản lý vào/ra:
 
 Trong Linux, mọi thứ được xem là một tệp, bao gồm cả các thiết bị và cổng giao tiếp. Dưới đây là một số tập lệnh liên quan đến quản lý vào/ra:
-
+  
 - ls /dev: Liệt kê các thiết bị có sẵn trong hệ thống.
 
 - dmesg: Hiển thị thông tin hệ thống và lịch sử lỗi của hệ thống.
