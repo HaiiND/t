@@ -53,57 +53,55 @@ Quản lý tài khoản người dùng và nhóm là một phần quan trọng c
 
 
 
-# Quản lý tiến trình, bộ nhớ, thư mục, và vào/ra là một phần quan trọng của việc quản lý hệ thống Ubuntu và các hệ thống Linux khác. Dưới đây, chúng ta sẽ tìm hiểu cách thực hiện các nhiệm vụ quản lý này và sử dụng một số tập lệnh quan trọng trong Ubuntu.
+# Quản lý tiến trình, bộ nhớ, thư mục, và vào/ra là một phần quan trọng của việc quản lý hệ thống Ubuntu và các hệ thống Linux khác. 
+
+Dưới đây, chúng ta sẽ tìm hiểu cách thực hiện các nhiệm vụ quản lý này và sử dụng một số tập lệnh quan trọng trong Ubuntu.
 
 ## 1. Quản lý tiến trình:
 
 Tiến trình là các chương trình hoặc nhiệm vụ đang chạy trên hệ thống. Dưới đây là một số tập lệnh quản lý tiến trình quan trọng:
 
-ps: Sử dụng để liệt kê tất cả các tiến trình đang chạy trên hệ thống.
+- ps: Sử dụng để liệt kê tất cả các tiến trình đang chạy trên hệ thống.
 
-top hoặc htop: Hiển thị danh sách tiến trình đang chạy theo thời gian thực, bao gồm thông tin về sử dụng CPU và bộ nhớ.
+- top hoặc htop: Hiển thị danh sách tiến trình đang chạy theo thời gian thực, bao gồm thông tin về sử dụng CPU và bộ nhớ.
 
-kill: Sử dụng để dừng tiến trình. Cú pháp cơ bản là kill <PID>, trong đó <PID> là số xác định tiến trình.
+- kill: Sử dụng để dừng tiến trình. Cú pháp cơ bản là kill <PID>, trong đó <PID> là số xác định tiến trình.
 
 ## 2. Quản lý bộ nhớ:
 
 Bộ nhớ là một phần quan trọng của hệ thống và việc quản lý nó đảm bảo rằng hệ thống hoạt động một cách hiệu quả. Dưới đây là một số tập lệnh liên quan đến quản lý bộ nhớ:
 
-free: Hiển thị thông tin về bộ nhớ hệ thống, bao gồm bộ nhớ đã sử dụng và còn trống.
+- free: Hiển thị thông tin về bộ nhớ hệ thống, bao gồm bộ nhớ đã sử dụng và còn trống.
 
-top hoặc htop: Bên cạnh việc quản lý tiến trình, chúng cũng hiển thị thông tin về việc sử dụng bộ nhớ, giúp bạn xác định các tiến trình tiêu tốn nhiều bộ nhớ.
+- top hoặc htop: Bên cạnh việc quản lý tiến trình, chúng cũng hiển thị thông tin về việc sử dụng bộ nhớ, giúp bạn xác định các tiến trình tiêu tốn nhiều bộ nhớ.
 
-vmstat: Hiển thị thông tin về việc sử dụng bộ nhớ ở cấp hệ thống.
+- vmstat: Hiển thị thông tin về việc sử dụng bộ nhớ ở cấp hệ thống.
 
 ## 3. Quản lý thư mục:
 
 Quản lý thư mục là việc sắp xếp, tạo ra, di chuyển và xóa thư mục và tệp trong hệ thống tệp của bạn. Dưới đây là một số tập lệnh quản lý thư mục quan trọng:
 
-ls: Dùng để liệt kê các tệp và thư mục trong thư mục hiện tại.
+- ls: Dùng để liệt kê các tệp và thư mục trong thư mục hiện tại.
 
-mkdir: Sử dụng để tạo mới một thư mục. Cú pháp là mkdir <tên_thư_mục>.
+- mkdir: Sử dụng để tạo mới một thư mục. Cú pháp là mkdir <tên_thư_mục>.
 
-cd: Sử dụng để di chuyển giữa các thư mục. Cú pháp là cd <đường_dẫn>.
+- cd: Sử dụng để di chuyển giữa các thư mục. Cú pháp là cd <đường_dẫn>.
 
-rm: Dùng để xóa tệp hoặc thư mục. Cú pháp là rm <tên_tệp_đã_xóa> hoặc rm -r <tên_thư_mục_đã_xóa> để xóa thư mục và nội dung bên trong.
+- rm: Dùng để xóa tệp hoặc thư mục. Cú pháp là rm <tên_tệp_đã_xóa> hoặc rm -r <tên_thư_mục_đã_xóa> để xóa thư mục và nội dung bên trong.
 
 ## 4. Quản lý vào/ra:
 
 Trong Linux, mọi thứ được xem là một tệp, bao gồm cả các thiết bị và cổng giao tiếp. Dưới đây là một số tập lệnh liên quan đến quản lý vào/ra:
 
-ls /dev: Liệt kê các thiết bị có sẵn trong hệ thống.
+- ls /dev: Liệt kê các thiết bị có sẵn trong hệ thống.
 
-dmesg: Hiển thị thông tin hệ thống và lịch sử lỗi của hệ thống.
+- dmesg: Hiển thị thông tin hệ thống và lịch sử lỗi của hệ thống.
 
-lsof: Liệt kê các tệp và thư mục đang được mở bởi các tiến trình.
+- lsof: Liệt kê các tệp và thư mục đang được mở bởi các tiến trình.
 
-strace: Sử dụng để theo dõi các cuộc gọi hệ thống và thao tác vào/ra của một tiến trình cụ thể.
+- strace: Sử dụng để theo dõi các cuộc gọi hệ thống và thao tác vào/ra của một tiến trình cụ thể.
 
 Quản lý tiến trình, bộ nhớ, thư mục, và vào/ra là một phần quan trọng của việc quản lý hệ thống Ubuntu và các hệ thống Linux khác. Nắm vững các tập lệnh này giúp bạn kiểm soát hiệu suất hệ thống, tìm hiểu và khắc phục sự cố, cũng như quản lý tệp và thư mục một cách hiệu quả. Hãy thực hành và nghiên cứu để trở thành một quản trị viên hệ thống thành thạo.
-
-
-
-
 
 
 # Gói cài đặt (package management) là một khía cạnh quan trọng trong việc quản lý hệ thống Ubuntu và các hệ điều hành dựa trên Linux khác. Gói cài đặt là cách tiện lợi để cài đặt, cập nhật và quản lý phần mềm trên hệ thống. Ubuntu sử dụng hệ thống quản lý gói cài đặt dpkg cùng với apt hoặc apt-get để tạo một môi trường quản lý gói mạnh mẽ và dễ sử dụng. Trong bài viết này, chúng ta sẽ tìm hiểu về gói cài đặt dpkg và cách sử dụng nó trong Ubuntu.
