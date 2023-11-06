@@ -48,9 +48,8 @@ Phân quyền dựa trên nhóm: Bạn có thể cấp quyền truy cập cho m�
 Xem danh sách nhóm: Sử dụng lệnh cat /etc/group để xem danh sách tất cả các nhóm trên hệ thống.
 
 Xóa nhóm: Để xóa một nhóm, bạn có thể sử dụng lệnh sudo groupdel <groupname>.
+
 Quản lý tài khoản người dùng và nhóm là một phần quan trọng của việc bảo mật và quản lý hệ thống Ubuntu. Nó cho phép bạn kiểm soát quyền truy cập vào tài nguyên và dữ liệu, đồng thời cũng giúp bạn tổ chức và quản lý người dùng dễ dàng hơn. Hãy luôn thực hiện các thao tác quản lý này cẩn thận và có lập kế hoạch trước để đảm bảo tính an toàn và hiệu quả của hệ thống.
-
-
 
 
 # Quản lý tiến trình, bộ nhớ, thư mục, và vào/ra là một phần quan trọng của việc quản lý hệ thống Ubuntu và các hệ thống Linux khác. 
@@ -104,7 +103,9 @@ Trong Linux, mọi thứ được xem là một tệp, bao gồm cả các thi�
 Quản lý tiến trình, bộ nhớ, thư mục, và vào/ra là một phần quan trọng của việc quản lý hệ thống Ubuntu và các hệ thống Linux khác. Nắm vững các tập lệnh này giúp bạn kiểm soát hiệu suất hệ thống, tìm hiểu và khắc phục sự cố, cũng như quản lý tệp và thư mục một cách hiệu quả. Hãy thực hành và nghiên cứu để trở thành một quản trị viên hệ thống thành thạo.
 
 
-# Gói cài đặt (package management) là một khía cạnh quan trọng trong việc quản lý hệ thống Ubuntu và các hệ điều hành dựa trên Linux khác. Gói cài đặt là cách tiện lợi để cài đặt, cập nhật và quản lý phần mềm trên hệ thống. Ubuntu sử dụng hệ thống quản lý gói cài đặt dpkg cùng với apt hoặc apt-get để tạo một môi trường quản lý gói mạnh mẽ và dễ sử dụng. Trong bài viết này, chúng ta sẽ tìm hiểu về gói cài đặt dpkg và cách sử dụng nó trong Ubuntu.
+# Gói cài đặt (package management) là một khía cạnh quan trọng trong việc quản lý hệ thống Ubuntu và các hệ điều hành dựa trên Linux khác.
+
+Gói cài đặt là cách tiện lợi để cài đặt, cập nhật và quản lý phần mềm trên hệ thống. Ubuntu sử dụng hệ thống quản lý gói cài đặt dpkg cùng với apt hoặc apt-get để tạo một môi trường quản lý gói mạnh mẽ và dễ sử dụng. Trong bài viết này, chúng ta sẽ tìm hiểu về gói cài đặt dpkg và cách sử dụng nó trong Ubuntu.
 
 Gói cài đặt dpkg:
 
