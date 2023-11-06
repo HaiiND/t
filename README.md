@@ -4,6 +4,29 @@ Trong hệ điều hành Ubuntu, quản lý tài khoản người dùng và tạ
 
 ## 1. Tài khoản người dùng:
 
+Trong quá trình cài đặt một hệ thống Linux, một số tài khoản người dùng đặc biệt sẽ tự động được tạo ra. Các tài khoản người dùng này được sử dụng với một số chức năng đặc biệt trên hệ thống. 
+
+Có 3 tài khoản người dùng đặc biệt : root, nobody và bin. 
+
+#### 1.1 Tài khoản root 
+
+Tài khoản root còn được gọi là tài khoản siêu người dùng là tài khoản có quyền cao nhất trên hệ thống Linux. Người dùng sử dụng tài khoản root để thực hiện một số công việc quản trị hệ thống bao gồm : thêm các tài khoản người dùng mới, thay đổi mật khẩu của người dùng, xem các file log của hệ thống, cài đặt phần mềm, gỡ bỏ phần mềm, thay đổi quyền của file trên hệ thống … 
+
+Khi sử dụng tài khoản root, người dùng phải rất cẩn thận vì mọi thao sẽ ảnh hưởng trực tiếp đến hệ thống. Tuy nhiên trong quá trình người dùng sử dụng tài khoản root để thực hiện một số công việc quản trị, hệ thống luôn có cảnh báo các thao tác mà người dùng đang thực hiện để tránh trường hợp người dùng làm sai ảnh hưởng đến hệ thống.
+
+Khi cài đặt Ubuntu. Bạn chính là người cài đặt, lúc đó bạn sẽ tạo 1 user và password để truy cập hệ thống. Và user này thuộc nhóm Admin. Quyền lực của nhóm này tuy mạnh nhưng không liên tục, nói cách khác thì quyền mặc định của bạn sử dụng không phải là quyền lớn nhất đối với hệ thống.
+
+Thay đổi password cho root 
+- Lưu ý: Khi thực hiện lệnh với đặc quyền của root, cần thêm sudo trước lệnh `sudo passwd root`
+
+  ![image](https://github.com/HaiiND/t/assets/120678965/a7ff3e3a-0944-4e51-ac7d-260b08b0019d)
+
+Sau bước này bạn nhập password của bạn vào và sẽ được hỏi :
+- Enter new UNIX password: Nhập password mới cho root 
+- Retype new UNIX password: Nhập lại password lần nữa
+
+Thông báo sau cùng : passwd: password updated successfully là thành công
+
 Trong Ubuntu, tài khoản người dùng là các thực thể được tạo ra để cho phép người dùng truy cập và sử dụng hệ thống. Dưới đây là một số tập lệnh quan trọng để quản lý tài khoản người dùng:
 
 - sudo adduser <username>: Sử dụng lệnh này để tạo một tài khoản người dùng mới với tên người dùng <username>.
@@ -25,7 +48,13 @@ Khóa và mở khóa tài khoản: Dùng lệnh sudo passwd -l <username> để 
 - ,,,: Những phần này thường liên quan đến thông tin về người dùng như tên đầy đủ, số điện thoại, địa chỉ, v.v. Trong trường hợp này, thông tin này đã được bỏ trống, vì vậy bạn thấy dấu phẩy liền kề.
 - /home/hdh1: Đây là đường dẫn đến thư mục chủ (home directory) của tài khoản người dùng. Đây là nơi người dùng lưu trữ các tệp và thư mục cá nhân của họ.
 - /bin/bash: Đây là đường dẫn đến shell mặc định mà tài khoản người dùng sẽ sử dụng khi đăng nhập vào hệ thống. Trong trường hợp này, tài khoản người dùng sẽ sử dụng shell Bash (/bin/bash) khi đăng nhập.
-  
+
+
+Một số UID đặc biệt: 
+- UID = 0: được gán cho tài khoản Root. 
+- UID = 65534: được gán cho tài khoản Nobody. 
+- UID = 1 – 99: được gán riêng cho các tài khoản dịch vụ. 
+
 ## 2. Tạo nhóm:
 
 Trong Ubuntu, bạn có thể tạo các nhóm để quản lý quyền truy cập và chia sẻ tài nguyên giữa các người dùng. Dưới đây là các bước để tạo một nhóm:
