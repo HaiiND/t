@@ -122,11 +122,40 @@ Khi bạn đã tạo các nhóm, có một số tập lệnh quản trị nhóm 
 Quản lý tài khoản người dùng và nhóm là một phần quan trọng của việc bảo mật và quản lý hệ thống Ubuntu. Nó cho phép bạn kiểm soát quyền truy cập vào tài nguyên và dữ liệu, đồng thời cũng giúp bạn tổ chức và quản lý người dùng dễ dàng hơn. Hãy luôn thực hiện các thao tác quản lý này cẩn thận và có lập kế hoạch trước để đảm bảo tính an toàn và hiệu quả của hệ thống.
 
 
-# Quản lý tiến trình, bộ nhớ, thư mục, và vào/ra là một phần quan trọng của việc quản lý hệ thống Ubuntu và các hệ thống Linux khác. 
+## 2. QUẢN LÝ TÀI NGUYÊN TRONG UBUNTU
 
-Dưới đây, chúng ta sẽ tìm hiểu cách thực hiện các nhiệm vụ quản lý này và sử dụng một số tập lệnh quan trọng trong Ubuntu.
+Ubuntu là hệ điều hảnh mở dựa trên Linux. Ubuntu tạo ra môi trường nhiều người dùng chung tài nguyên. Chính vì vậy việc bảo mật các tài nguyên này rất quan trọng. Người quản trị cần phải thiết lập quyền hạn cho tập tin, thư mục sao cho không bị thay đổi nội dung, không bị xóa. Để nắm rõ vấn đề này, bạn cần tìm hiểu quyền hạn của người dùng trên FileSystem. Đây cũng là một trong số những ly do người sử dụng đánh giá rất cao khả năng bảo mật, an toàn. Ngoài ra việc phân quyền tốt sẽ tránh việc hệ thống file system của Ubuntu bị phá hỏng nhờ đó hệ thống vận hành một cách ổn định hơn.
 
-## 1. Quản lý tiến trình:
+#### 2.1 Quyền truy cập trên file system 
+
+Trong Linux mọi đối tượng đều có dạng là tập tin. Tất cả tập tin đều có  người sở hữu và quyền truy cập. 
+
+-Linux cho phép người dùng xác định các quyền đọc (read), ghi (write) và thự thi 
+
+(execute) cho từng đối tượng. Có ba loại đối tượng : 
+ + Người sở hữu (owner) : 3 ký tự đầu tiên (rw-) 
+ + Nhóm sở hữu (group) : 3 ký tự tiếp theo (r--) 
+ + Người khác (others) : 3 ký tự cuối cùng (r--) 
+ 
+- Quyền đọc : cho phép bạn đọc nội dung của tập tin. Đối với thư mực, quyền đọc cho phép bạn di chuyển vào thư mục bằng lệnh cd và xem nội dung của thư mục. 
+- Quyền ghi : cho phép bạn thay đổi nội dung hay xóa tập tin. Đối với thư mục, quyền ghi cho phép bạn tạo ra, xóa hay thay đổi tên các tập tin, thư mục con trong thư mục cha, nhưng không phụ thuộc vào quyền cụ thể của tập tin trong thư mục. Như vậy, quyền ghi của thư 
+mục sẽ vô hiệu hóa các quyền truy cập của tập tin trong thư mục. 
+- Quyền thực thi : cho phép bạn gọi chương trình lên bộ nhớ cách cách nhập tên tập tin từ bàn phím hay bằng chuột. Đối với thư mục, bạn chỉ có thể chuyển vào (cd) thư mục nếu bạn có quyền thực thi với thư mục. 
+
+Owner Group Others 
+read write execute read write execute read write execute 
+Theo cách tính số nhị phân, ta có thể xác định số quyền hạn của một đối 
+tượng bằng cách tính tổng giá trị các quyền. 
+-Theo cách tính số nhị phân, ta có thể xác định số quyền hạn của một đối 
+tượng bằng cách tính tổng giá trị các quyền. 
+Quyền Giá trị hệ 2 Giá trị hệ 10 
+Read 100 4 
+Write 010 2 
+Excute 001 1 
+None 000 0
+  ![image](https://github.com/HaiiND/t/assets/120678965/020073ee-98d0-4396-8e76-afe86395f4b1)
+
+#### 2.2. Quản lý tiến trình:
 
 Tiến trình là các chương trình hoặc nhiệm vụ đang chạy trên hệ thống. Dưới đây là một số tập lệnh quản lý tiến trình quan trọng:
 
@@ -138,7 +167,7 @@ Tiến trình là các chương trình hoặc nhiệm vụ đang chạy trên h�
 
 - kill: Sử dụng để dừng tiến trình. Cú pháp cơ bản là kill <PID>, trong đó <PID> là số xác định tiến trình.
 
-## 2. Quản lý bộ nhớ:
+#### 2.3. Quản lý bộ nhớ:
 
 Bộ nhớ là một phần quan trọng của hệ thống và việc quản lý nó đảm bảo rằng hệ thống hoạt động một cách hiệu quả. Dưới đây là một số tập lệnh liên quan đến quản lý bộ nhớ:
 
@@ -150,7 +179,7 @@ Bộ nhớ là một phần quan trọng của hệ thống và việc quản l�
 
 - vmstat: Hiển thị thông tin về việc sử dụng bộ nhớ ở cấp hệ thống.
 
-## 3. Quản lý thư mục:
+#### 2.4. Quản lý thư mục:
 
 Quản lý thư mục là việc sắp xếp, tạo ra, di chuyển và xóa thư mục và tệp trong hệ thống tệp của bạn. Dưới đây là một số tập lệnh quản lý thư mục quan trọng:
 
@@ -164,7 +193,7 @@ Quản lý thư mục là việc sắp xếp, tạo ra, di chuyển và xóa th�
 
 - rm: Dùng để xóa tệp hoặc thư mục. Cú pháp là rm <tên_tệp_đã_xóa> hoặc rm -r <tên_thư_mục_đã_xóa> để xóa thư mục và nội dung bên trong.
 
-## 4. Quản lý vào/ra:
+#### 2.5. Quản lý vào/ra:
 
 Trong Linux, mọi thứ được xem là một tệp, bao gồm cả các thiết bị và cổng giao tiếp. Dưới đây là một số tập lệnh liên quan đến quản lý vào/ra:
   
@@ -179,7 +208,7 @@ Trong Linux, mọi thứ được xem là một tệp, bao gồm cả các thi�
 Quản lý tiến trình, bộ nhớ, thư mục, và vào/ra là một phần quan trọng của việc quản lý hệ thống Ubuntu và các hệ thống Linux khác. Nắm vững các tập lệnh này giúp bạn kiểm soát hiệu suất hệ thống, tìm hiểu và khắc phục sự cố, cũng như quản lý tệp và thư mục một cách hiệu quả. Hãy thực hành và nghiên cứu để trở thành một quản trị viên hệ thống thành thạo.
 
 
-# Gói cài đặt (package management) là một khía cạnh quan trọng trong việc quản lý hệ thống Ubuntu và các hệ điều hành dựa trên Linux khác.
+## 3.Gói cài đặt (package management)
 
 Gói cài đặt là cách tiện lợi để cài đặt, cập nhật và quản lý phần mềm trên hệ thống. Ubuntu sử dụng hệ thống quản lý gói cài đặt dpkg cùng với apt hoặc apt-get để tạo một môi trường quản lý gói mạnh mẽ và dễ sử dụng. Trong bài viết này, chúng ta sẽ tìm hiểu về gói cài đặt dpkg và cách sử dụng nó trong Ubuntu.
 
