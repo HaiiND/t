@@ -1,4 +1,4 @@
-![image](https://github.com/HaiiND/t/assets/120678965/b4c8024b-15f0-4e5f-aad0-d9d4b88394bf)# Thiết lập tài khoản người dùng, Tạo nhóm, tìm hiểu những tập lệnh quản trị nhóm	
+# Thiết lập tài khoản người dùng, Tạo nhóm, tìm hiểu những tập lệnh quản trị nhóm	
 
 Trong hệ điều hành Ubuntu, quản lý tài khoản người dùng và tạo nhóm là một phần quan trọng của việc quản lý hệ thống. Điều này cho phép bạn tạo, quản lý và kiểm soát quyền truy cập của người dùng vào các tài nguyên trên máy chủ hoặc máy tính cá nhân. Dưới đây, chúng ta sẽ tìm hiểu về cách thiết lập tài khoản người dùng, tạo nhóm và sử dụng một số tập lệnh quản trị nhóm trong Ubuntu.
 
